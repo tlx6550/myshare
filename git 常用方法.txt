@@ -1,0 +1,12 @@
+1.先从github 创建仓库
+2.负责仓库地址到本地 git clone https://github.com/tlx6550/myshare.git
+3.查看当前的git hub 目录结构
+git status
+
+4.添加新增的文件
+git add -A
+
+5.新增说明 git commit -m "说明陈述"
+
+6.把代码推送到github
+git push
