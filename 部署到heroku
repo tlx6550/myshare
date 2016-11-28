@@ -1,5 +1,5 @@
 4.15.1 申请 MLab
-
+账号密码（tlx..0,..gt）
 MLab (前身是 MongoLab) 是一个 mongodb 云数据库提供商，我们可以选择 500MB 空间的免费套餐用来测试。注册成功后，点击右上角的 Create New 创建一个数据库（如: myblog），成功后点击进入到该数据库详情页，注意页面中有一行黄色的警告：
 
 A database user is required to connect to this database. To create one now, visit the 'Users' tab and click the 'Add database user' button.
@@ -15,6 +15,7 @@ mongodb://<dbuser>:<dbpassword>@ds139327.mlab.com:39327/myblog
 
 步骤二：原贴链接：http://www.jb51.net/article/52990.htm
 好，现在部署工作可以开始了。
+账号密码（91...@qq.com，....gt）
 首先，你需要到 www.heroku.com 上注册一个用户，用户名是你的邮箱地址。然后安装 Heroku Toolbelt ，这是一个命令行工具，可以让你直接在shell里用命令发布代码，查看系统状态，修改服务器配置，等等。
 然后在shell里用heroku login命令登录，输入你的用户名和密码即可。
 ?
