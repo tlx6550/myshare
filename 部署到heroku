@@ -1,0 +1,69 @@
+4.15.1 申请 MLab
+
+MLab (前身是 MongoLab) 是一个 mongodb 云数据库提供商，我们可以选择 500MB 空间的免费套餐用来测试。注册成功后，点击右上角的 Create New 创建一个数据库（如: myblog），成功后点击进入到该数据库详情页，注意页面中有一行黄色的警告：
+
+A database user is required to connect to this database. To create one now, visit the 'Users' tab and click the 'Add database user' button.
+每个数据库至少需要一个 user，所以我们点击 Users 下的 Add database user 创建一个用户。
+
+注意：不要选中 Make read-only，因为我们有写数据库的操作。
+最后分配给我们的类似下面的 mongodb url：
+
+mongodb://<dbuser>:<dbpassword>@ds139327.mlab.com:39327/myblog
+
+原贴链接：https://github.com/nswbmw/N-blog/blob/master/book/4.15%20%E9%83%A8%E7%BD%B2.md#4151-%E7%94%B3%E8%AF%B7-mlab
+
+
+步骤二：原贴链接：http://www.jb51.net/article/52990.htm
+好，现在部署工作可以开始了。
+首先，你需要到 www.heroku.com 上注册一个用户，用户名是你的邮箱地址。然后安装 Heroku Toolbelt ，这是一个命令行工具，可以让你直接在shell里用命令发布代码，查看系统状态，修改服务器配置，等等。
+然后在shell里用heroku login命令登录，输入你的用户名和密码即可。
+?
+1
+$ heroku login
+第一步可以用foreman start命令检查一下你的代码是否能顺利在heroku上运行，如果看到输出中没有报错，那就说明基本正常。
+?
+1
+$ foreman start
+然后就是用git同步代码：
+?
+1
+2
+3
+4
+5
+$ git init
+ 
+$ git add .
+ 
+$ git commit -m "init"
+创建heroku应用：
+?
+1
+$ heroku create sample9527
+如果sample9527这个app名在heroku上没有人用，那么你会创建成功，应用的链接就是http://sample9527.herokuapp.com/，不然就改个名字接着试，或者直接用heroku create让它帮你起一个新名字。
+如果需要安装一些数据库之类的插件，可以看看它有什么add-on可用，然后在命令行加入。比如加入一个MongoLab提供的MongoDB数据库：
+?
+1
+$ heroku addons:add mongolab
+(大部分add-on需要你在用户信息中填入信用卡，但是如果选用免费版本则不会被扣费，放心吧）
+然后就可以同步程序代码了：
+?
+1
+$ git push heroku master
+同步之后，heroku会自动根据npm配置下载和安装必要的dependencies，然后启动你的应用。
+现在可以到应用链接看一下是否正常，如果有错误，可以在命令行查看日志：
+?
+1
+$ heroku logs
+根据日志中的错误信息修改代码后，可以再次提交代码：
+?
+1
+2
+3
+$ git commit -a -m "update some code"
+ 
+$ git push heroku master
+或者在需要时直接用restart命令重启服务：
+?
+1
+$ heroku restart
