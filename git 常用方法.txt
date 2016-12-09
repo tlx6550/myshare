@@ -1,12 +1,16 @@
-1.ÏÈ´Ógithub ´´½¨²Ö¿â
-2.¸ºÔğ²Ö¿âµØÖ·µ½±¾µØ git clone https://github.com/tlx6550/myshare.git
-3.²é¿´µ±Ç°µÄgit hub Ä¿Â¼½á¹¹
+1.å…ˆä»github åˆ›å»ºä»“åº“
+2.è´Ÿè´£ä»“åº“åœ°å€åˆ°æœ¬åœ° git clone https://github.com/tlx6550/myshare.git
+3.æŸ¥çœ‹å½“å‰çš„git hub ç›®å½•ç»“æ„
 git status
 
-4.Ìí¼ÓĞÂÔöµÄÎÄ¼ş
+4.æ·»åŠ æ–°å¢çš„æ–‡ä»¶
 git add -A
 
-5.ĞÂÔöËµÃ÷ git commit -m "ËµÃ÷³ÂÊö"
+5.æ–°å¢è¯´æ˜ git commit -m "è¯´æ˜é™ˆè¿°"
 
-6.°Ñ´úÂëÍÆËÍµ½github
+6.æŠŠä»£ç æ¨é€åˆ°github
 git push
+å…è´¹cdnåº“æœåŠ¡
+http://www.bootcdn.cn
+æŠŠé™æ€é¡µé¢éƒ¨ç½²åˆ°githubä¸Š
+https://www.zhihu.com/question/24156818
