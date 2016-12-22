@@ -10,6 +10,10 @@ git add -A
 
 6.把代码推送到github
 git push
+
+本地分支到远程新分支上
+git push origin 本地分支名:远程分支名
+
 免费cdn库服务
 http://www.bootcdn.cn
 把静态页面部署到github上
