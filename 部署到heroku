@@ -1,3 +1,4 @@
+带数据库
 4.15.1 申请 MLab
 账号密码（tlx..0,..gt）
 MLab (前身是 MongoLab) 是一个 mongodb 云数据库提供商，我们可以选择 500MB 空间的免费套餐用来测试。注册成功后，点击右上角的 Create New 创建一个数据库（如: myblog），成功后点击进入到该数据库详情页，注意页面中有一行黄色的警告：
@@ -68,3 +69,8 @@ $ git push heroku master
 ?
 1
 $ heroku restart
+
+
+使用第三方数据接口
+http://www.jianshu.com/p/c6b5a4ee8cf0
+如何将vue项目部署至heroku上以供外网访问
