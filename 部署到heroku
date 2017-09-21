@@ -74,3 +74,17 @@ $ heroku restart
 使用第三方数据接口
 http://www.jianshu.com/p/c6b5a4ee8cf0
 如何将vue项目部署至heroku上以供外网访问
+经本人测试成功的是使用第一种方法，但是有所区别
+1.首先先把项目打包编译
+2.修改package.json 依赖包
+  其中注意要点："scripts": {
+    "dev": "node build/dev-server.js",
+    "start": "node prod.server.js",
+    "build": "node build/build.js",
+    "lint": "eslint --ext .js,.vue src"
+  }
+  A:"start": "node prod.server.js" 的启动文件
+  B:"devDependencies": {
+    "express": "^4.14.1"
+  }
+  第三方依赖包要声明，因为启动文件需要依靠这个插件
